@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/get', function () {
+    return 'Ovo je get';
+})->name('GET');
+
+Route::post('/post', function () {
+    return 'Ovo je post';
+})->name('POST');
+
+Route::put('/put', function () {
+    return 'Ovo je put.';
+})->name('PUT');
+
+Route::patch('/patch', function () {
+    return 'Ovo je patch';
+})->name('PATCH');
+
+Route::delete('/delete', function () {
+    return 'Ovo je delete';
+})->name('DELETE');
