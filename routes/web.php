@@ -15,27 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/get', function () {
-    return 'Ovo je get';    
-})->name('GET')->middleware('age');
+Route::get('/get', 'HomeController@get')->name('GET')->middleware('age');
 
-Route::get('/simple', function () {
-    $first_name = 'Igor';
-    return view('simple', ['first_name' => $first_name]);
-})->name('Simple');
+Route::get('/simple', 'HomeController@simple')->name('Simple');
 
-Route::post('/post', function () {
-    return 'Ovo je post';
-})->name('POST');
+Route::post('/post', 'HomeController@post')->name('POST');
 
-Route::put('/put', function () {
-    return 'Ovo je put.';
-})->name('PUT');
+Route::put('/put', 'HomeController@put')->name('PUT');
 
-Route::patch('/patch', function () {
-    return 'Ovo je patch';
-})->name('PATCH');
+Route::patch('/patch', 'HomeController@patch')->name('PATCH');
 
-Route::delete('/delete', function () {
-    return 'Ovo je delete';
-})->name('DELETE');
+Route::delete('/delete', 'HomeController@delete')->name('DELETE');
+
+Route::resource('/resource', 'ResourceController');
