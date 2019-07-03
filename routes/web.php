@@ -16,8 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/get', function () {
-    return 'Ovo je get';
+    return 'Ovo je get';    
 })->name('GET')->middleware('age');
+
+Route::get('/simple', function () {
+    $first_name = 'Igor';
+    return view('simple', ['first_name' => $first_name]);
+})->name('Simple');
 
 Route::post('/post', function () {
     return 'Ovo je post';
