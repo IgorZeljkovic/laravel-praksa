@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/get', function () {
     return 'Ovo je get';
-})->name('GET');
+})->name('GET')->middleware('age');
 
 Route::post('/post', function () {
     return 'Ovo je post';
