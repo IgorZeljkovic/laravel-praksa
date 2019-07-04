@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Log;
 
 class SimpleOne
 {
@@ -15,7 +16,7 @@ class SimpleOne
      */
     public function handle($request, Closure $next)
     {
-        echo $request;
+        Log::info($request.'');
         
         return $next($request);
     }

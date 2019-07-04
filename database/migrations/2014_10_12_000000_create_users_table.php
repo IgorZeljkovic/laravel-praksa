@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('company');
             $table->string('country');
+            $table->rememberToken();
         });
     }
 

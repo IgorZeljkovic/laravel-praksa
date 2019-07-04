@@ -28,3 +28,6 @@ Route::patch('/patch', 'HomeController@patch')->name('PATCH');
 Route::delete('/delete', 'HomeController@delete')->name('DELETE');
 
 Route::resource('/resource', 'ResourceController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

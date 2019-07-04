@@ -6,40 +6,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
-        $this->middleware('age')->only('GET');
-    }
-    
-    public function get()
-    {
-        return 'Ovo je get';
+        $this->middleware('auth');
     }
 
-    public function simple()
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        $first_name = 'Igor';
-        return view('simple', ['first_name' => $first_name]);
-    }
-
-    public function post()
-    {
-        return 'Ovo je post';
-    }
-
-    public function put()
-    {
-        return 'Ovo je put';
-    }
-
-    public function patch()
-    {
-        return 'Ovo je patch';
-    }
-
-    public function delete()
-    {
-        return 'Ovo je delete';
+        return view('home');
     }
 }
