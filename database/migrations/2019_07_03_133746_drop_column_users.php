@@ -14,7 +14,7 @@ class DropColumnUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('isDeleted');
+            $table->dropColumn('is_deleted');
         });
     }
 
@@ -26,7 +26,7 @@ class DropColumnUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            Schema::dropIfExists('users');
+            $table->boolean('is_deleted');
         });
     }
 }

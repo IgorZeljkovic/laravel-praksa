@@ -15,17 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/get', 'HomeController@get')->name('GET')->middleware('age');
+Route::get('/get', 'HomelessController@get')->name('GET')->middleware('age');
 
-Route::get('/simple', 'HomeController@simple')->name('Simple');
+Route::get('/simple', 'HomelessController@simple')->name('simple');
 
-Route::post('/post', 'HomeController@post')->name('POST');
+Route::post('/post', 'HomelessController@post')->name('POST');
 
-Route::put('/put', 'HomeController@put')->name('PUT');
+Route::put('/put', 'HomelessController@put')->name('PUT');
 
-Route::patch('/patch', 'HomeController@patch')->name('PATCH');
+Route::patch('/patch', 'HomelessController@patch')->name('PATCH');
 
-Route::delete('/delete', 'HomeController@delete')->name('DELETE');
+Route::delete('/delete', 'HomelessController@delete')->name('DELETE');
 
 Route::resource('/resource', 'ResourceController');
 Auth::routes();

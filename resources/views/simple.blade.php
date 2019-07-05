@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello, {{ $first_name }}</title>
+        <title>Hello, {{ $firstName }}</title>
     </head>
     <body>
-        <h1>Hello, {{ $first_name }}</h1>
+        <h1>Hello, {{ $firstName }}</h1>
     </body>
 </html>
